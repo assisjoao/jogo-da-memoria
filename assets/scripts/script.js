@@ -3,12 +3,10 @@ const BACK = "card_back";
 const CARD = "card";
 const ICON = "icon";
 
-
-
 startGame ();
 
 function startGame () {
-    initializeCards(game.creatCardsFromTechs ());
+    initializeCards(game.creatCardsFromTechs());
 }
 
 function initializeCards (cards) {
@@ -16,6 +14,7 @@ function initializeCards (cards) {
     gameBoard.innerHTML = '';
 
     game.cards.forEach (card => {
+
         let cardElement = document.createElement('div');
         cardElement.id = card.id;
         cardElement.classList.add(CARD);
@@ -29,6 +28,7 @@ function initializeCards (cards) {
 }
 
 function createCardContent(card, cardElement) {
+    
     createCardFace(FRONT, card, cardElement);
     createCardFace(BACK, card, cardElement);
 
